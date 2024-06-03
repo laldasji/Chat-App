@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatSecret</title>
+    <link rel="stylesheet" href="chatStyle.css">
+    <link rel="shortcut icon" href="wang.jpg" type="image/x-icon">
+</head>
+
+<body>
+<div id="addChannelPopup" style="display: none;">
+    Enter Channel Details
+        <input type="text" id="newChannelName" placeholder="Channel Name">
+        <input type="text" id="newChannelID" placeholder="Channel ID">
+        <sub>Press confirm to enter the channel</sub>
+    <button id="confirmAddChannel">
+        Confirm
+    </button>
+    <div id="addAlert">
+    </div>
+</div>
+<div id="title">ChatSecret</div>
+<div id="userInterface">
+    <div id="sidebar">
+
+        <div id="userProfile">
+            <div id="userName">
+            </div>
+        </div>
+
+        <div id="activeChannels">
+            <button id="addChannel" class="channelSelector">ADD NEW</button>
+        </div>
+
+        <div id="darkMode">
+            <button>DARK MODE (coming soon)</button>
+        </div>
+
+    </div>
+
+    <div id="messageInterface">
+
+        <div id="channelNameDisplay">
+            
+        </div>
+
+        <div id="messageDisplay">
+        </div>
+
+        <div id="inputField">
+            <div id="textInput">
+                <textarea type="text" id="textMessage" placeholder="Enter Message"></textarea>
+            </div>
+            <div id="Send">
+                <button class="inputFieldButton sendMessage" id="sendButton">
+                    <img src="images/send.png" alt="send">
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="chatScript.js"></script>
+</body>
+</html>

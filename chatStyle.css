@@ -1,0 +1,278 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --caribbean-current: #006d77ff;
+    --tiffany-blue: #83c5beff;
+    --alice-blue: #edf6f9ff;
+    --mountbatten-pink: #9a879dff;
+    --byzantium: #7a3b69ff;
+    --mssg-display-height: calc(0.85*90svh);
+    --channel-list-height: calc(0.9*90svh);
+}
+
+body
+{
+    display: flex;
+    width: 100svw;
+    height: 100svh;
+    flex-direction: column;
+}
+
+#addChannelPopup
+{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    top: 20%;
+    background-color: rgba(153, 205, 50, 0.507);
+    width: 40%;
+    max-width: 40%;
+    height: 40%;
+    max-height: 40%;
+    text-align: center;
+}
+
+#newChannelName, #newChannelID
+{
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#confirmAddChannel
+{
+    width: 50%;
+    max-width: 50%;
+    height: 2rem;
+}
+
+#addAlert
+{
+    font-size: 1rem;
+}
+
+#title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: var(--alice-blue);
+    font-weight: 900;
+    background-color: var(--caribbean-current);
+    flex-basis: 10%;
+    width: 100%;
+    max-height: 10%;
+}
+
+#userInterface
+{
+    flex-basis: 90%;
+    display: flex;
+}
+
+#sidebar
+{
+    flex-basis: 15%;
+    max-width: 15%;
+    background-color: var(--tiffany-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+#userProfile
+{
+    display: flex;
+    flex-basis: 5%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#userName
+{
+    text-align: right;
+    padding-right: 0.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.2em;
+}
+
+#activeChannels
+{
+    flex-basis: 90%;
+    display: flex;
+    max-height: var(--channel-list-height);
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.channelSelector
+{
+    color: var(--caribbean-current);
+    background-color: var(--alice-blue);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: none;
+    min-height: 5%;
+    width: 100%;
+    max-width: 100%;
+    height: 5%;
+    font-size: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.channelSelector:hover
+{
+    background-color: var(--tiffany-blue);
+}
+
+#darkMode
+{
+    flex-basis: 5%;
+}
+
+#darkMode button
+{
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    transition-duration: 0.5s;
+}
+
+#darkMode button:hover
+{
+    background-color: black;
+    color: white;
+}
+
+#messageInterface
+{
+    background-color: white;
+    flex-basis: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+#channelNameDisplay
+{
+    flex-basis: 5%;
+    min-height: 5%;
+    max-height: 5%;
+    font-size: 2em;
+    width: 100%;
+    color: white;
+    background-color: var(--byzantium);
+}
+
+#messageDisplay
+{
+    flex-basis: 90%;
+    /* messages will be flex items, aligned either left or right*/
+    max-height: var(--mssg-display-height);
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.Message
+{
+    font-size: 1.2em;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: red;
+    width: fit-content;
+    border-radius: 1em;
+    border-width: 0;
+    max-width: 60%;
+}
+
+.sender
+{
+    background-color: var(--mountbatten-pink);
+    align-self: flex-start;
+}
+
+.user
+{
+    background-color: rgb(199, 175, 202);
+    align-self: flex-end;
+    text-align: right;
+}
+
+.userIdDisplay
+{
+    color: white;
+}
+
+
+#inputField
+{
+    background-color: var(--caribbean-current);
+    flex-basis: 10%;
+    display: flex;
+}
+
+#inputField img
+{
+    max-height: 2em;
+}
+
+textarea
+{
+    font-size: 1.25em;
+    padding: 1%;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.inputFieldButton
+{
+    background-color: rgba(255,255,255,0);
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.inputFieldButton:hover
+{
+    background-color: rgba(255,255,255,0.1);
+}
+
+#textInput
+{
+    flex-basis: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(0.1*90svh);
+}
+
+#textInput textarea
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    border-radius: 1em;
+    width: 95%;
+    max-height: 70%;
+}
+
+#Send
+{
+    flex-basis: 5%;
+}
