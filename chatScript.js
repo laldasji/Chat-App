@@ -2,19 +2,21 @@
 let channelMap = {};
 let activeChannelID ='';
 
-const messageDisplay = document.getElementById('messageDisplay');
-const sendButton = document.querySelector("#sendButton");
-const textContainer = document.querySelector("#textMessage");
 const userName = document.querySelector("#userName");
+
 const channelList = document.querySelector("#activeChannels");
 const addChannelPopup = document.querySelector("#addChannelPopup");
 const confirmAddChannel = document.querySelector("#confirmAddChannel");
-const addChannelButton = document.querySelector("#addChannel");
 const newChannelName = document.querySelector("#newChannelName");
 const newChannelID = document.querySelector("#newChannelID");
 const channelNameDisplay = document.querySelector("#channelNameDisplay");
-const addAlert = document.querySelector("#addAlert");
+const addChannelButton = document.querySelector("#addChannel");
 const exitAddChannel = document.querySelector("#exitAddChannel");
+
+const textContainer = document.querySelector("#textMessage");
+const addAlert = document.querySelector("#addAlert");
+const messageDisplay = document.getElementById('messageDisplay');
+const sendButton = document.querySelector("#sendButton");
 
 class user
 {

@@ -221,7 +221,6 @@ body
 #messageDisplay
 {
     flex-basis: 90%;
-    /* messages will be flex items, aligned either left or right*/
     max-height: var(--mssg-display-height);
     display: flex;
     overflow-y: scroll;
