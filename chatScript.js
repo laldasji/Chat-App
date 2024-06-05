@@ -14,6 +14,7 @@ const newChannelName = document.querySelector("#newChannelName");
 const newChannelID = document.querySelector("#newChannelID");
 const channelNameDisplay = document.querySelector("#channelNameDisplay");
 const addAlert = document.querySelector("#addAlert");
+const exitAddChannel = document.querySelector("#exitAddChannel");
 
 class user
 {
@@ -87,6 +88,10 @@ function generateKey(channelName, channelID)
     return channelName + '-#!' + channelID;
 }
 
+exitAddChannel.addEventListener('click', () => {
+    addChannelPopup.style.display = 'none';
+});
+
 function addChannelToList()
 {
     channelToAddName = newChannelName.value.trimRight();
@@ -127,11 +132,16 @@ function addChannelToList()
     channelButtonText.textContent = channelToAddName;
 
     const deleteChannelButton = document.createElement("button");
+    deleteChannelButton.classList.add('deleteChannelButton');
     deleteChannelButton.textContent = 'Delete';
+
 
     deleteChannelButton.addEventListener('click', (event) => {
         event.stopPropagation();
-        channelNameDisplay.textContent = '';
+        if (activeChannelID === channelButton.id) {
+            messageDisplay.textContent = '';
+            channelNameDisplay.textContent = '';
+        }
         delete channelMap[channelButton.id];
         channelList.removeChild(channelButton);
     });
@@ -169,8 +179,9 @@ addChannelButton.addEventListener("click", () => {
 });
 
 const sendMessage = () => {
-    if (textContainer.value != '' && activeChannelID != '')
+    if (textContainer.value != '' && activeChannelID != undefined)
     {
+        console.log(activeChannelID);
         const currentChannel = channelMap[activeChannelID];
         const newInput = new Message(textContainer.value, userInformation.userID);
         newInput.addToChannel(activeChannelID);

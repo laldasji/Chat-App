@@ -4,7 +4,9 @@ const usernameInput = document.querySelector("#inputUsername");
 
 const usernameRules = document.createElement("div");
 usernameRules.style.fontSize = '1.25rem';
-usernameRules.style.backgroundColor = "pink";
+usernameRules.style.backgroundColor = "var(--slate-gray)";
+usernameRules.style.color = 'var(--baby-powder)';
+usernameRules.style.boxShadow = '0.5rem 0.5rem 0 black';
 usernameRules.style.padding = '1rem';
 usernameRules.textContent = "Username must contain Alphanumeric characters; no spaces, special characters allowed";
 

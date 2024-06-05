@@ -6,13 +6,10 @@
 
 :root
 {
-    --caribbean-current: #006d77ff;
-    --tiffany-blue: #83c5beff;
-    --alice-blue: #edf6f9ff;
-    --mountbatten-pink: #9a879dff;
-    --byzantium: #7a3b69ff;
-    --mssg-display-height: calc(0.85*90vh);
-    --channel-list-height: calc(0.9*90vh);
+    --red-cmyk: rgba(237, 28, 36, 1);
+    --baby-powder: rgba(253, 255, 252, 1);
+    --slate-gray: rgba(125, 132, 145, 1);
+    --eerie-black: rgba(23, 29, 28, 1);
 }
 
 body
@@ -30,9 +27,9 @@ body
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color: var(--alice-blue);
+    color: var(--baby-powder);
     font-weight: 900;
-    background-color: var(--caribbean-current);
+    background-color: var(--eerie-black);
     flex-basis: 10%;
     width: 100%;
     max-height: 10%;
@@ -40,6 +37,8 @@ body
 
 #login
 {
+    background-color: var(--red-cmyk);
+    color: var(--baby-powder);
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -51,7 +50,7 @@ body
     max-height: 50%;
     height: 50%;
     margin: 5%;
-    box-shadow: 0.5em 0.5em 1em rgb(56, 56, 56);
+    box-shadow: 0.5em 0.5em 0 black;
 }
 
 #loginText
@@ -88,5 +87,6 @@ body
 
 #loginIdStatus
 {
+    background-color: var();
     flex-basis: 25%;
 }

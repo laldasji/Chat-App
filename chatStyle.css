@@ -6,11 +6,10 @@
 
 :root
 {
-    --caribbean-current: #006d77ff;
-    --tiffany-blue: #83c5beff;
-    --alice-blue: #edf6f9ff;
-    --mountbatten-pink: #9a879dff;
-    --byzantium: #7a3b69ff;
+    --red-cmyk: rgba(237, 28, 36, 1);
+    --baby-powder: rgba(253, 255, 252, 1);
+    --slate-gray: rgba(125, 132, 145, 1);
+    --eerie-black: rgba(23, 29, 28, 1);
     --mssg-display-height: calc(0.85*90svh);
     --channel-list-height: calc(0.9*90svh);
 }
@@ -34,12 +33,33 @@ body
     align-self: center;
     justify-self: center;
     top: 20%;
-    background-color: rgba(153, 205, 50, 0.507);
+    background-color: rgba(125, 132, 145, 0.5);
     width: 40%;
     max-width: 40%;
     height: 40%;
     max-height: 40%;
     text-align: center;
+}
+
+#exitAddChannel
+{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 7%;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#exitAddChannel:hover
+{
+    background-color: rgba(0,0,0, 0.2);
+}
+
+#exitAddChannel img
+{
+    max-width: 1.5rem;
 }
 
 #newChannelName, #newChannelID
@@ -67,9 +87,9 @@ body
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color: var(--alice-blue);
+    color: var(--baby-powder);
     font-weight: 900;
-    background-color: var(--caribbean-current);
+    background-color: var(--eerie-black);
     flex-basis: 10%;
     width: 100%;
     max-height: 10%;
@@ -85,7 +105,7 @@ body
 {
     flex-basis: 15%;
     max-width: 15%;
-    background-color: var(--tiffany-blue);
+    background-color: var(--red-cmyk);
     display: flex;
     flex-direction: column;
 }
@@ -95,6 +115,7 @@ body
     display: flex;
     flex-basis: 5%;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.125);
     justify-content: space-around;
 }
 
@@ -113,17 +134,18 @@ body
     flex-basis: 90%;
     display: flex;
     max-height: var(--channel-list-height);
-    overflow-y: scroll;
+    overflow-y: scroll hidden;
     flex-direction: column;
 }
 
 .channelSelector
 {
-    color: var(--caribbean-current);
-    background-color: var(--alice-blue);
+    color: var(--baby-powder);
+    background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
-    text-align: center;
+    align-items: center;
+    justify-content: space-around;
     border: none;
     min-height: 5%;
     width: 100%;
@@ -137,7 +159,21 @@ body
 
 .channelSelector:hover
 {
-    background-color: var(--tiffany-blue);
+    background-color: rgba(0, 0, 0, 0.175);
+}
+
+.deleteChannelButton
+{
+    color: var(--baby-powder);
+    background-color: var(--eerie-black);
+    border: none;
+    padding: 1%
+}
+
+.deleteChannelButton:hover
+{
+    color: var(--eerie-black);
+    background-color: var(--baby-powder);
 }
 
 #darkMode
@@ -171,13 +207,15 @@ body
 
 #channelNameDisplay
 {
+    display: flex;
+    justify-content: center;
     flex-basis: 5%;
     min-height: 5%;
     max-height: 5%;
     font-size: 2em;
     width: 100%;
-    color: white;
-    background-color: var(--byzantium);
+    color: var(--baby-powder);
+    background-color: var(--slate-gray);
 }
 
 #messageDisplay
@@ -204,19 +242,20 @@ body
 
 .sender
 {
-    background-color: var(--mountbatten-pink);
+    background-color: var(--red-cmyk);
     align-self: flex-start;
 }
 
 .user
 {
-    background-color: rgb(199, 175, 202);
+    background-color: var(--slate-gray);
     align-self: flex-end;
     text-align: right;
 }
 
 .userIdDisplay
 {
+    font-style: italic;
     color: white;
 }
 
@@ -251,7 +290,7 @@ textarea
 
 .inputFieldButton:hover
 {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.1);
 }
 
 #textInput
